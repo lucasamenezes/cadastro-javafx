@@ -16,7 +16,7 @@ public class PessoaView {
     private TableView<Pessoa> tabela;
     private Label mensagemLabel;
 
-    // Interfaces funcionais para ações dos botões [cite: 638]
+    // Interfaces funcionais para ações dos botões
     private Runnable onSalvarButtonClicked;
     private Runnable onLimparButtonClicked;
 
@@ -80,13 +80,13 @@ public class PessoaView {
 
     public VBox getRoot() { return root; }
 
-    // Leem os dados que o usuário digitou e retornam para o Controller [cite: 828]
+    // Leem os dados que o usuário digitou e retornam para o Controller
     public String getNomeInput() { return nomeField.getText(); }
     public String getCpfInput() { return cpfField.getText(); }
     public String getEmailInput() { return emailField.getText(); }
     public String getTelefoneInput() { return telefoneField.getText(); }
 
-    // Recebem as ações do Controller e armazenam nos Runnables [cite: 841, 842, 843]
+    // Recebem as ações do Controller e armazenam nos Runnables
     public void setOnSalvarButtonClicked(Runnable handler) { this.onSalvarButtonClicked = handler; }
     public void setOnLimparButtonClicked(Runnable handler) { this.onLimparButtonClicked = handler; }
 

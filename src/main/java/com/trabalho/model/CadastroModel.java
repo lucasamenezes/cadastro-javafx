@@ -6,20 +6,20 @@ import java.util.List;
 public class CadastroModel {
     private List<Pessoa> listaPessoas = new ArrayList<>();
     
-    // Listeners para notificar mudanças [cite: 54]
+    // Listeners para notificar mudanças
     private List<ModelListener> listeners = new ArrayList<>();
 
-    // Define um contrato que qualquer observador deve seguir [cite: 61]
+    // Define um contrato que qualquer observador deve seguir
     public interface ModelListener {
         void onModelChanged();
     }
 
-    // Registra um novo observador na lista [cite: 224]
+    // Registra um novo observador na lista
     public void addListener(ModelListener listener) {
         listeners.add(listener);
     }
 
-    // Notifica todos os observadores que algo mudou [cite: 277]
+    // Notifica todos os observadores que algo mudou
     private void notifyListeners() {
         for (ModelListener listener : listeners) {
             listener.onModelChanged();

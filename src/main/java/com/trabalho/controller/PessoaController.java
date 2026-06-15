@@ -12,11 +12,11 @@ public class PessoaController {
         this.model = model;
         this.view = view;
 
-        // Passa os métodos como ações para a View executar [cite: 976, 1023]
+        // Passa os métodos como ações para a View executar
         this.view.setOnSalvarButtonClicked(this::handleSalvar);
         this.view.setOnLimparButtonClicked(this::handleLimpar);
 
-        // Registra o listener no Model para atualizar a View automaticamente [cite: 1099, 1103]
+        // Registra o listener no Model para atualizar a View automaticamente
         this.model.addListener(() -> this.view.atualizarTabela(this.model.getPessoas()));
     }
 
@@ -33,7 +33,7 @@ public class PessoaController {
         }
 
         Pessoa novaPessoa = new Pessoa(nome, cpf, email, telefone);
-        model.adicionarPessoa(novaPessoa); // Atualizar model [cite: 965]
+        model.adicionarPessoa(novaPessoa);
         
         view.mostrarSucesso("Pessoa cadastrada com sucesso!");
         view.limparCampos();
